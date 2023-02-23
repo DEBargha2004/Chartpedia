@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveVoronoi } from '@nivo/voronoi';
 import voronoidata from '../../data/chartdata/voronoidata'
 
-function Voronoichart() {
+function Voronoichart(props) {
+  let data = props.data['/voronoi'] ? JSON.parse(props.data['/voronoi']) : voronoidata
   return (
     <ResponsiveVoronoi
-    data={voronoidata}
+    data={data}
     xDomain={[ 0, 100 ]}
     yDomain={[ 0, 100 ]}
     enableLinks={true}
@@ -19,3 +20,4 @@ function Voronoichart() {
 }
 
 export default Voronoichart;
+

@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveCalendar } from '@nivo/calendar';
 import calendardata from '../../data/chartdata/calendardata';
 
-function Calendarchart() {
+function Calendarchart(props) {
+  let data = props.data['/calendar'] ? JSON.parse(props.data['/calendar']) : calendardata
   return (
     <ResponsiveCalendar 
-      data = {calendardata}
+      data = {data}
       from="2015-01-01"
       to="2018-08-11"
       colors={[ '#61cdbb', '#97e3d5', '#e8c1a0', '#f47560' ]}
@@ -21,3 +22,4 @@ function Calendarchart() {
 }
 
 export default Calendarchart;
+

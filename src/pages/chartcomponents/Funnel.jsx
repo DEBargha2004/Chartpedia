@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveFunnel } from '@nivo/funnel';
 import funneldata from '../../data/chartdata/funneldata';
 
-function Funnelchart() {
+function Funnelchart(props) {
+  let data = props.data['/funnel'] ? JSON.parse(props.data['/funnel']) : funneldata
   return (
     <ResponsiveFunnel 
-    data={funneldata}
+    data={data}
     margin={{top:100,bottom:100}}
     borderWidth={16}
     shapeBlending={0.9}
@@ -31,3 +32,4 @@ function Funnelchart() {
 }
 
 export default Funnelchart;
+

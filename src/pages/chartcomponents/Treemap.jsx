@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveTreeMap } from '@nivo/treemap';
 import treemapdata from '../../data/chartdata/treemapdata'
 
-function Treemapchart() {
+function Treemapchart(props) {
+  let data = props.data['/tree-map'] ? JSON.parse(props.data['/tree-map']) : treemapdata
   return (
     <ResponsiveTreeMap
-      data={treemapdata}
+      data={data}
       identity="name"
       value="loc"
       valueFormat=".02s"
@@ -44,3 +45,4 @@ function Treemapchart() {
 }
 
 export default Treemapchart;
+

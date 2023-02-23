@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveScatterPlot } from '@nivo/scatterplot';
 import scatterplotdata from '../../data/chartdata/scatterplotdata'
 
-function Scatterplotchart() {
+function Scatterplotchart(props) {
+  let data = props.data['/scatter-plot'] ? JSON.parse(props.data['/scatter-plot']) : scatterplotdata
   return (
     <ResponsiveScatterPlot
-      data={scatterplotdata}
+      data={data}
       margin={{ top: 60, right: 140, bottom: 70, left: 90 }}
       xScale={{ type: 'linear', min: 0, max: 'auto' }}
       xFormat=">-.2f"
@@ -60,3 +61,4 @@ function Scatterplotchart() {
 }
 
 export default Scatterplotchart;
+

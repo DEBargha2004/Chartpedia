@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveHeatMap } from '@nivo/heatmap';
 import heatmapdata from '../../data/chartdata/heatmapdata'
 
-function Heatmapchart() {
+function Heatmapchart(props) {
+  let data = props.data['/heat-map'] ? JSON.parse(props.data['/heat-map']) : heatmapdata
   return (
     <ResponsiveHeatMap 
-    data={heatmapdata}
+    data={data}
     margin={{top:100,bottom:100,left:100,right:100}}
     emptyColor="#ffffff"
     valueFormat="-0.3s"
@@ -50,3 +51,4 @@ function Heatmapchart() {
 }
 
 export default Heatmapchart;
+

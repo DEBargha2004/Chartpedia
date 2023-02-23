@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveRadialBar } from '@nivo/radial-bar';
 import radialbardata from '../../data/chartdata/radialbardata'
 
-function Radialbarchart() {
+function Radialbarchart(props) {
+  let data = props.data['/radial-bar'] ? JSON.parse(props.data['/radial-bar']) : radialbardata
   return (
     <ResponsiveRadialBar
-      data={radialbardata}
+      data={data}
       valueFormat=">-.2f"
       padding={0.4}
       cornerRadius={2}
@@ -41,3 +42,4 @@ function Radialbarchart() {
 }
 
 export default Radialbarchart;
+

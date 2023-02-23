@@ -2,11 +2,12 @@ import React from 'react'
 import { ResponsiveLine } from '@nivo/line';
 import linemapdata from '../../data/chartdata/linedata'
 
-function Linechart() {
+function Linechart(props) {
+  let data = props.data['/line'] ? JSON.parse(props.data['/line']) : linemapdata
   return (
     <ResponsiveLine 
-    data={linemapdata}
-    margin={{top:120,bottom:120,left:60,right:100}}
+    data={data}
+    margin={{top:80,bottom:80,left:60,right:100}}
     yFormat="-.2f"
     xScale={{type:'point'}}
     yScale={{
@@ -51,3 +52,4 @@ function Linechart() {
 }
 
 export default Linechart;
+

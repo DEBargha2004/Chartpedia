@@ -1,11 +1,12 @@
 import React from 'react'
 import { ResponsiveCirclePacking } from '@nivo/circle-packing';
-import circlepacking_data from '../../data/chartdata/circlepackingdata'
+import circlepackingdata from '../../data/chartdata/circlepackingdata'
 
-function Circlepackingchart() {
+function Circlepackingchart(props) {
+  let data = props.data['/circle-packing'] ? JSON.parse(props.data['/circle-packing']) : circlepackingdata
   return (
     <ResponsiveCirclePacking
-      data={circlepacking_data}
+      data={data}
       id="name"
       value="loc"
       margin={{ bottom: 70, top: 50 }}
@@ -56,3 +57,4 @@ function Circlepackingchart() {
 }
 
 export default Circlepackingchart;
+

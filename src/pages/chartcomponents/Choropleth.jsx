@@ -3,12 +3,13 @@ import { ResponsiveChoropleth } from '@nivo/geo';
 import choropleth_features from '../../data/features'
 import choroplethdata from '../../data/chartdata/choroplethdata'
 
-function Choroplethchart() {
+function Choroplethchart(props) {
+  let data = props.data['/choropleth'] ? JSON.parse(props.data['/choropleth']) : choroplethdata
   useEffect(()=>{
   })
   return (
     <ResponsiveChoropleth
-      data={choroplethdata}
+      data={data}
       features={choropleth_features.features}
       domain={[0, 1000000]}
       colors="nivo"
@@ -67,3 +68,4 @@ function Choroplethchart() {
 }
 
 export default Choroplethchart;
+

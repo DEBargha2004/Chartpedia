@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveBump } from '@nivo/bump';
 import bumpdata from '../../data/chartdata/bumpdata'
 
-function Bumpchart() {
+function Bumpchart(props) {
+  let data = props.data['/bump'] ? JSON.parse(props.data['/bump']) : bumpdata
   return (
     <ResponsiveBump
-      data={bumpdata}
+      data={data}
       colors={{ scheme: 'nivo' }}
       lineWidth={3}
       activeLineWidth={6}
@@ -49,3 +50,5 @@ function Bumpchart() {
 }
 
 export default Bumpchart;
+
+

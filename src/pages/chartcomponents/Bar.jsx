@@ -4,10 +4,11 @@ import bardata from '../../data/chartdata/bardata'
 
 
 
-function Barchart() {
+function Barchart(props) {
+  let data = props.data['/bar'] ? JSON.parse(props.data['/bar']) : bardata
   return (
     <ResponsiveBar 
-      data={bardata}
+      data={data}
       keys={[
         'hot dog',
         'burger',
@@ -86,3 +87,4 @@ function Barchart() {
 }
 
 export default Barchart;
+

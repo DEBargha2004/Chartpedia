@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveNetwork } from '@nivo/network';
 import networkdata from '../../data/chartdata/networkdata'
 
-function Networkchart() {
+function Networkchart(props) {
+  let data = props.data['/network'] ? JSON.parse(props.data['/network']) : networkdata
   return (
     <ResponsiveNetwork
-      data={networkdata}
+      data={data}
       margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
       linkDistance={function (e) { return e.distance }}
       centeringStrength={0.3}
@@ -31,3 +32,4 @@ function Networkchart() {
 }
 
 export default Networkchart;
+

@@ -2,6 +2,7 @@ import React from 'react'
 import { ResponsiveAreaBump } from '@nivo/bump';
 import areabumpdata from '../../data/chartdata/areabumpdata'
 
+
 function Areabumpchart() {
   return (
     <ResponsiveAreaBump 
@@ -50,3 +51,4 @@ function Areabumpchart() {
 }
 
 export default Areabumpchart;
+

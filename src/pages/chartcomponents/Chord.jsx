@@ -1,11 +1,12 @@
 import React from 'react'
 import { ResponsiveChord } from '@nivo/chord';
-import chord_data from '../../data/chartdata/chorddata'
+import chorddata from '../../data/chartdata/chorddata'
 
-function Chordchart() {
+function Chordchart(props) {
+  let data = props.data['/chord'] ? JSON.parse(props.data['/chord']) : chorddata
   return (
     <ResponsiveChord 
-      data={chord_data}
+      data={data}
       keys={['Ajay','Malini','Suchi','Srikant','Tithi']}
       margin={{bottom:100,top:30}}
       valueFormat=".2f"
@@ -51,3 +52,4 @@ function Chordchart() {
 }
 
 export default Chordchart;
+

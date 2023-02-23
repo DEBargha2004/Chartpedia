@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveSunburst } from '@nivo/sunburst';
 import sunburstdata from '../../data/chartdata/sunburstdata'
 
-function Sunburstchart() {
+function Sunburstchart(props) {
+  let data = props.data['/sun-burst'] ? JSON.parse(props.data['/sun-burst']) : sunburstdata
   return (
     <ResponsiveSunburst
-      data={sunburstdata}
+      data={data}
       margin={{ top: 10, right: 10, bottom: 10, left: 10 }}
       id="name"
       value="loc"
@@ -38,3 +39,4 @@ function Sunburstchart() {
 }
 
 export default Sunburstchart;
+

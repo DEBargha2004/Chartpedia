@@ -26,7 +26,7 @@ import Voronoichart from '../pages/chartcomponents/Voronoi'
 import Wafflechart from '../pages/chartcomponents/Waffle'
 const chartlist = [
     {
-        id: 'area-bump',
+        id: 'areabump',
         name: 'Area Bump',
         element: <Areabumpchart />,
         note: <p className="para">An <span>area bump chart</span>, also known as a bump plot or a ranked dot plot, is a data
@@ -131,7 +131,7 @@ const chartlist = [
             choice of color scale and the representation of data at the regional level.</p>
     },
     {
-        id: 'circle-packing',
+        id: 'circlepacking',
         name: 'Circle Packing',
         element: <Circlepackingchart />,
         note: <p className='para'>A <span>circle packing chart</span> is a type of data visualization that represents hierarchical data
@@ -160,7 +160,7 @@ const chartlist = [
             gest bottlenecks are in the process.</p>
     },
     {
-        id: 'heat-map',
+        id: 'heatmap',
         name: 'Heat Map',
         element: <Heatmapchart />,
         note: <p className='para'>
@@ -265,7 +265,7 @@ const chartlist = [
         </p>
     },
     {
-        id: 'parallel-coordinates',
+        id: 'parallelcoordinates',
         name: 'Parallel Coordinates',
         element: <Parallelcoordinateschart />,
         note: <p className='para'>
@@ -319,7 +319,7 @@ const chartlist = [
         </p>
     },
     {
-        id: 'radial-bar',
+        id: 'radialbar',
         name: 'Radial Bar',
         element: <Radialbarchart />,
         note: <p className='para'>
@@ -352,7 +352,7 @@ const chartlist = [
         </p>
     },
     {
-        id: 'scatter-plot',
+        id: 'scatterplot',
         name: 'Scatter Plot',
         element: <Scatterplotchart />,
         note: <p className='para'>
@@ -383,7 +383,7 @@ const chartlist = [
         </p>
     },
     {
-        id: 'sun-burst',
+        id: 'sunburst',
         name: 'Sun Burst',
         element: <Sunburstchart />,
         note: <p className='para'>
@@ -398,7 +398,7 @@ const chartlist = [
         </p>
     },
     {
-        id: 'swarm-plot',
+        id: 'swarmplot',
         name: 'Swarm Plot',
         element: <Swarmplotchart />,
         note: <p className='para'>
@@ -414,7 +414,7 @@ const chartlist = [
         </p>
     },
     {
-        id: 'time-range',
+        id: 'timerange',
         name: 'Time Range',
         element: <Timerangechart />,
         note: <p className='para'>
@@ -428,7 +428,7 @@ const chartlist = [
         </p>
     },
     {
-        id: 'tree-map',
+        id: 'treemap',
         name: 'Tree Map',
         element: <Treemapchart />,
         note: <p className='para'>

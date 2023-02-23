@@ -1,4 +1,4 @@
-const circlepacking_data = {
+const circlepackingdata = {
     "name": "nivo",
     "color": "hsl(187, 70%, 50%)",
     "children": [
@@ -419,4 +419,4 @@ const circlepacking_data = {
         }
     ]
 }
-export default circlepacking_data;
+export default circlepackingdata;

@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveRadar } from '@nivo/radar';
 import radardata from '../../data/chartdata/radardata'
 
-function Radarchartchart() {
+function Radarchartchart(props) {
+  let data = props.data['/radar'] ? JSON.parse(props.data['/radar']) : radardata
   return (
     <ResponsiveRadar
-      data={radardata}
+      data={data}
       keys={['chardonay', 'carmenere', 'syrah']}
       indexBy="taste"
       valueFormat=">-.2f"
@@ -44,3 +45,4 @@ function Radarchartchart() {
 }
 
 export default Radarchartchart;
+

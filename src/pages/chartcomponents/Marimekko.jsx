@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveMarimekko } from '@nivo/marimekko';
 import marimekkodata from '../../data/chartdata/marimekkodata'
 
-function Marimekkochart() {
+function Marimekkochart(props) {
+  let data = props.data['/marimekko'] ? JSON.parse(props.data['/marimekko']) : marimekkodata
   return (
     <ResponsiveMarimekko
-    data={marimekkodata}
+    data={data}
     id="statement"
     value="participation"
     margin={{bottom:100,top:100,left:50,right:50}}
@@ -110,3 +111,4 @@ function Marimekkochart() {
 }
 
 export default Marimekkochart;
+

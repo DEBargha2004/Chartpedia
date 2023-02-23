@@ -1,4 +1,4 @@
-const chord_data = [
+const chorddata = [
     [
         1198,
         310,
@@ -35,4 +35,4 @@ const chord_data = [
         653
     ]
 ]
-export default chord_data;
+export default chorddata;

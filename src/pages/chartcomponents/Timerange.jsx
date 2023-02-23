@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveTimeRange } from '@nivo/calendar';
 import timerangedata from '../../data/chartdata/timerangedata'
 
-function Timerangechart() {
+function Timerangechart(props) {
+  let data = props.data['/time-range'] ? JSON.parse(props.data['/time-range']) : timerangedata
   return (
     <ResponsiveTimeRange
-        data={timerangedata}
+        data={data}
         from="2018-04-01"
         to="2018-08-12"
         emptyColor="#eeeeee"
@@ -24,7 +25,7 @@ function Timerangechart() {
                 itemsSpacing: 14,
                 itemDirection: 'right-to-left',
                 translateX: -60,
-                translateY: -150,
+                translateY: -100,
                 symbolSize: 20
             }
         ]}
@@ -33,3 +34,4 @@ function Timerangechart() {
 }
 
 export default Timerangechart;
+

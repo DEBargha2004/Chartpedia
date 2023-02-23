@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveSwarmPlot } from '@nivo/swarmplot';
 import swarmplotdata from '../../data/chartdata/swarmplotdata'
 
-function Swarmplotchart() {
+function Swarmplotchart(props) {
+  let data = props.data['/swarm-plot'] ? JSON.parse(props.data['/swarm-plot']) : swarmplotdata
   return (
     <ResponsiveSwarmPlot
-      data={swarmplotdata}
+      data={data}
       groups={['group A', 'group B', 'group C']}
       identity="id"
       value="price"
@@ -79,3 +80,4 @@ function Swarmplotchart() {
 }
 
 export default Swarmplotchart;
+

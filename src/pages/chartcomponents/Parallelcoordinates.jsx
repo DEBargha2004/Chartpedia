@@ -2,10 +2,11 @@ import React from 'react'
 import { ResponsiveParallelCoordinates } from '@nivo/parallel-coordinates';
 import parallelcoordinatesdata from '../../data/chartdata/parallelcoordinatesdata';
 
-function Parallelcoordinateschart() {
+function Parallelcoordinateschart(props) {
+    let data = props.data['/parallel-coordinates'] ? JSON.parse(props.data['/parallel-coordinates']) : parallelcoordinatesdata
   return (
     <ResponsiveParallelCoordinates
-        data={parallelcoordinatesdata}
+        data={data}
         variables={[
             {
                 key: 'temp',
@@ -72,3 +73,4 @@ function Parallelcoordinateschart() {
 }
 
 export default Parallelcoordinateschart;
+
