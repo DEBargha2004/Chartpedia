@@ -3,10 +3,11 @@ import { ResponsiveAreaBump } from '@nivo/bump';
 import areabumpdata from '../../data/chartdata/areabumpdata'
 
 
-function Areabumpchart() {
+function Areabumpchart(props) {
+  let data = props.data['/areabump'] ? JSON.parse(props.data['/areabump']) : areabumpdata
   return (
     <ResponsiveAreaBump 
-      data={areabumpdata}
+      data={data}
       blendMode="multiply"
       margin={{left:70,right:70,top:80,bottom:80}}
       startLabel="id"

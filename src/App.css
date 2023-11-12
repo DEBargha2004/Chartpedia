@@ -106,7 +106,7 @@ html,body,#root,.body-container{
     display: none;
 }
 .reusable-header{
-    margin:40px 0 30px 50px;
+    margin:40px 0 30px 5%;
     padding: 5px 0 5px 15px;
     background-color: rgb(255, 249, 198);
     color: rgb(68, 68, 68);
